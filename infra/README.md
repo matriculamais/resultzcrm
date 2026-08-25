@@ -64,7 +64,8 @@ VPS São Paulo (Hostinger KVM) rodando Coolify (painel web)
 
 - `ENCRYPTION_KEY` é única por cliente e nunca muda depois de criada.
 - `PG_DATABASE_PASSWORD` forte e única por cliente, sem caracteres especiais.
-- Depois de criar o workspace do cliente, definir `IS_SIGN_UP_DISABLED=true`.
+- Com `IS_MULTIWORKSPACE_ENABLED=false` (padrão do template), o Twenty bloqueia
+  sozinho a criação de novos workspaces depois que o primeiro existir.
 - Backups: ativar o profile `backup` (variável `COMPOSE_PROFILES=backup`) com
   bucket R2 dedicado; testar restauração antes de entregar ao cliente.
 - Painel do Coolify sempre atrás de Cloudflare Access (nunca IP:porta aberto).

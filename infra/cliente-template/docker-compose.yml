@@ -32,7 +32,8 @@ services:
       CAPTCHA_SITE_KEY: ${CAPTCHA_SITE_KEY}
       CAPTCHA_SECRET_KEY: ${CAPTCHA_SECRET_KEY}
 
-      IS_SIGN_UP_DISABLED: ${IS_SIGN_UP_DISABLED:-false}
+      # Com multiworkspace desligado, o Twenty bloqueia sozinho a criacao de
+      # novos workspaces depois que o primeiro (o do cliente) existir.
       IS_MULTIWORKSPACE_ENABLED: "false"
     depends_on:
       db:
